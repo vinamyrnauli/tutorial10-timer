@@ -13,7 +13,7 @@ Kelas: Pemrograman Lanjut - A<br>
 * Pada saat saya melakukan `cargo run`, "hey hey" bisa muncul sebelum "howdy!" dan "done!". Ini disebabkan oleh pernyataan `println!("hey hey");` terletak di luar fungsi *async*, yang berarti akan dijalankan secara independen dari eksekusi fungsi *async*.
 <br>
 
-###### 1.2. 1.3. Multiple Spawn and removing drop.
+###### 1.3. Multiple Spawn and removing drop.
 ![](images/2.png) 
 * Adanya lebih banyak *spawner* menyebabkan peningkatan jumlah tugas yang dieksekusi. Ini disebabkan oleh banyaknya tugas yang ditambahkan ke dalam antrian pesan oleh pengirim tugas.
 * Ketidakhapusan *spawner* mengakibatkan program tidak pernah berhenti karena diasumsikan masih ada transmisi data dari *spawner*. `drop(spawner)` menandakan bahwa interaksi telah selesai dan *spawner* akan ditutup.
